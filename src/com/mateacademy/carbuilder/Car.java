@@ -38,20 +38,12 @@ public class Car {
         this.currentSpeed = speed;
     }
 
-    public void addPassenger() {
-        if (passengerCount < passengerCapacity) {
-            passengerCount++;
-        } else {
-            System.out.println("Car is already full");
-        }
+    public boolean addPassenger() {
+        return passengerCount < passengerCapacity;
     }
 
-    public void removePassenger() {
-        if (passengerCount > 0) {
-            passengerCount--;
-        } else {
-            System.out.println("Car is already empty");
-        }
+    public boolean removePassenger() {
+        return passengerCount > 0;
     }
 
     public void removeAllPasengers() {
@@ -59,11 +51,21 @@ public class Car {
     }
 
     public CarDoor getCarDoor(int index) {
-        return doors.get(index);
+        if (index >= 0 && index < doors.size()) {
+            return doors.get(index);
+        }
+        else {
+            return null;
+        }
     }
 
     public CarWheel getCarWheel(int index) {
-        return wheels.get(index);
+        if (index >= 0 && index < wheels.size()) {
+            return wheels.get(index);
+        }
+        else {
+            return null;
+        }
     }
 
     public void removeAllWheels() {

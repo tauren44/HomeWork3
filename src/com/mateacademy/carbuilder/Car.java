@@ -1,9 +1,11 @@
 package com.mateacademy.carbuilder;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Car {
-    private final String dateOfConstruction;
+    private final LocalDate dateOfConstruction;
     private final String engineType;
     private int maxSpeed;
     private int accelerateToHundred;
@@ -13,17 +15,21 @@ public class Car {
     private List<CarWheel> wheels = new ArrayList<>();
     private List<CarDoor> doors = new ArrayList<>();
 
-    public Car(String dateOfConstruction, String engineType) {
+    public Car(LocalDate dateOfConstruction, String engineType, int passengerCapacity) {
         this.dateOfConstruction = dateOfConstruction;
         this.engineType = engineType;
+        this.passengerCapacity = passengerCapacity;
     }
 
-    public Car(String dateOfConstruction, String engineType, int maxSpeed,
+    public Car() {
+        this(LocalDate.now(), "petrol", 2);
+    }
+
+    public Car(LocalDate dateOfConstruction, String engineType, int maxSpeed,
                int accelerateToHundred, int passengerCapacity, int passengerCount, int currentSpeed) {
-        this(dateOfConstruction, engineType);
+        this(dateOfConstruction, engineType, passengerCapacity);
         this.maxSpeed = maxSpeed;
         this.accelerateToHundred = accelerateToHundred;
-        this.passengerCapacity = passengerCapacity;
         this.passengerCount = passengerCount;
         this.currentSpeed = currentSpeed;
     }

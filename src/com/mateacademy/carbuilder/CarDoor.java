@@ -14,35 +14,27 @@ public class CarDoor {
     }
 
     public void openDoor() {
-        if (!doorIsOpened) {
-            this.doorIsOpened = (true);
-        }
+        this.doorIsOpened = true;
     }
 
     public void closeDoor() {
-        if (doorIsOpened) {
-            this.doorIsOpened = (false);
-        }
+        this.doorIsOpened = false;
     }
 
     public void switchDoor() {
-        this.doorIsOpened = (!doorIsOpened);
+        this.doorIsOpened = !doorIsOpened;
     }
 
     public void openWindow() {
-        if (!windowIsOpened) {
-            this.windowIsOpened = (true);
-        }
+        this.windowIsOpened = true;
     }
 
     public void closeWindow() {
-        if (windowIsOpened) {
-            this.windowIsOpened = (false);
-        }
+        this.windowIsOpened = false;
     }
 
     public void switchWindow() {
-        this.windowIsOpened = (!windowIsOpened);
+        this.windowIsOpened = !windowIsOpened;
     }
 
     public boolean isDoorOpened() {

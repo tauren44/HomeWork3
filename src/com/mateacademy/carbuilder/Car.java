@@ -51,21 +51,11 @@ public class Car {
     }
 
     public CarDoor getCarDoor(int index) {
-        if (index >= 0 && index < doors.size()) {
-            return doors.get(index);
-        }
-        else {
-            return null;
-        }
+        return (index >= 0 && index < doors.size()) ? doors.get(index) : null;
     }
 
     public CarWheel getCarWheel(int index) {
-        if (index >= 0 && index < wheels.size()) {
-            return wheels.get(index);
-        }
-        else {
-            return null;
-        }
+        return (index >= 0 && index < wheels.size()) ? wheels.get(index) : null;
     }
 
     public void removeAllWheels() {

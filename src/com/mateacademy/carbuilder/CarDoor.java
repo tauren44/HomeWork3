@@ -5,8 +5,7 @@ public class CarDoor {
     private boolean windowIsOpened;
 
     public CarDoor() {
-        doorIsOpened = false;
-        windowIsOpened = false;
+
     }
 
     public CarDoor(boolean doorIsOpened, boolean windowIsOpened) {
@@ -16,50 +15,42 @@ public class CarDoor {
 
     public void openDoor() {
         if (!doorIsOpened) {
-            setDoorIsOpened(true);
+            this.doorIsOpened = (true);
         }
     }
 
     public void closeDoor() {
         if (doorIsOpened) {
-            setDoorIsOpened(false);
+            this.doorIsOpened = (false);
         }
     }
 
     public void switchDoor() {
-        setDoorIsOpened(!doorIsOpened);
+        this.doorIsOpened = (!doorIsOpened);
     }
 
     public void openWindow() {
         if (!windowIsOpened) {
-            setWindowIsOpened(true);
+            this.windowIsOpened = (true);
         }
     }
 
     public void closeWindow() {
         if (windowIsOpened) {
-            setWindowIsOpened(false);
+            this.windowIsOpened = (false);
         }
     }
 
     public void switchWindow() {
-        setWindowIsOpened(!windowIsOpened);
+        this.windowIsOpened = (!windowIsOpened);
     }
 
     public boolean isDoorOpened() {
         return doorIsOpened;
     }
 
-    public void setDoorIsOpened(boolean doorIsOpened) {
-        this.doorIsOpened = doorIsOpened;
-    }
-
     public boolean isWindowOpened() {
         return windowIsOpened;
-    }
-
-    public void setWindowIsOpened(boolean windowIsOpened) {
-        this.windowIsOpened = windowIsOpened;
     }
 
     public void printCarDoorState() {
